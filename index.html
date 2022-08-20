@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        .task
+        {
+            background-color:beige;
+            padding: 2;
+            margin: 0;
+        }
+        table tr
+        {
+            position: relative;
+            width:70%;
+        }
+        table tr td
+        {
+            width:70px;
+        }
+        td[class="close"]
+        {
+            text-align: center;
+            padding-right: 90px;
+        }
+        .closeLink
+        {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .closeLink:hover
+        {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const input=document.createElement("input");
+        const button=document.createElement("button");
+        var table=document.createElement("table");
+        var e=document.getElementsByTagName("body")[0];
+        e.appendChild(input).placeholder="Add a List";
+        e.appendChild(button).innerHTML="Add item";
+        e.childNodes[3].setAttribute("onClick","return addItem()");
+        // var btn=e.childNodes[3].addEventListener("click",close);
+        e.appendChild(table);
+        function close(e)
+        {
+            console.log(e);
+            return false;
+        }
+
+        //Display data in body
+         function addItem()
+        {
+            var tr=document.createElement("tr");
+            var td=document.createElement("td");
+            var td2=document.createElement("td");
+            var div=document.createElement("div")
+            let item=e.childNodes[2].value;
+            let t=document.createTextNode(item);
+            td2.setAttribute("class","task");
+            td2.setAttribute("class","close");
+            div.setAttribute("onClick","return close()");
+            div.setAttribute("class","closeLink");
+            div.innerText="X";
+            td2.appendChild(div);
+            tr.appendChild(td).appendChild(t);
+            tr.appendChild(td2);
+            table.appendChild(tr);
+            return false;
+        }
+
+        function close()
+        {
+            console.log("Clicked on X");
+            return false;
+        }
+    </script>
+</body>
+</html>
