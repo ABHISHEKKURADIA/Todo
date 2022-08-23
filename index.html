@@ -10,6 +10,7 @@
         body
         {
             margin: 0;
+            padding: 20px;
         }
         .task
         {
@@ -56,6 +57,10 @@
         {
             border: 2px solid grey;
         }
+        input[type="text"]
+        {
+            width: 35%;
+        }
     </style>
 </head>
 <body>
@@ -70,6 +75,7 @@
         container.className="container col";
         e.appendChild(container);
         input.className="form-control-sm";
+        input.setAttribute("type","text");
         container.appendChild(input).placeholder="Add a List";
         button.className="btn btn-primary";
         container.appendChild(button).innerHTML="Add item";
