@@ -1,0 +1,60 @@
+body
+{
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(219, 219, 219);
+}
+.task
+{
+    background-color:beige;
+    padding: 2;
+    margin: 0;
+}
+table
+{
+    position: relative;
+    
+}
+table tr
+{
+    position: relative;
+    width:70%;
+}
+table tr td
+{
+    min-width: 120px;
+    max-width: 250px;
+    word-wrap: break-word;
+    padding-left: 4px ;
+}
+
+
+td[class="close"]
+{
+    width: 30px;
+    text-align: right;
+    padding-right: 5px;
+}
+.closeLink
+{
+    text-decoration: none;
+    cursor: pointer;
+    border: 0px;
+    background-color: transparent;
+}
+.closeLink:hover
+{
+    color: grey;
+}
+table tr
+{
+    border: 2px solid grey;
+}
+input[type="text"]
+{
+    width: 35%;
+}
+.container
+{
+    height: 80%;
+}
